@@ -1,11 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import {
-  Environment,
-  MeshTransmissionMaterial,
-  Text,
-} from "@react-three/drei";
+import { Environment, MeshTransmissionMaterial, Text } from "@react-three/drei";
 import { useMotionValue, useSpring } from "framer-motion";
 import { motion } from "framer-motion-3d";
 import { useControls } from "leva";
@@ -38,8 +34,8 @@ function AnimatedMesh() {
   }, []);
 
   useFrame(() => {
-    mesh.current.rotation.x += 0.005;
-    mesh.current.rotation.y += 0.005;
+    mesh.current.rotation.x += 0.004;
+    mesh.current.rotation.y += 0.004;
   });
 
   const { viewport } = useThree();
@@ -53,16 +49,14 @@ function AnimatedMesh() {
   });
 
   return (
-    <group>
-      <Text fontSize={1.2} fontWeight={700} font="fonts/ClimateCrisis.ttf">
-          Inovação  
+    <group scale={viewport.width/ 10}>
+      <Text fontSize={0.9} font="fonts/ClimateCrisis.ttf">
+        Inovação
       </Text>
-      <group scale={viewport.width / 8.5}>
-        <motion.mesh ref={mesh} rotation-x={mouse.y} rotation-y={mouse.x}>
-          <torusGeometry />
-          <MeshTransmissionMaterial {...materialProps} />
-        </motion.mesh>
-      </group>
+      <motion.mesh ref={mesh} rotation-x={mouse.y} rotation-y={mouse.x}>
+        <torusGeometry />
+        <MeshTransmissionMaterial {...materialProps} />
+      </motion.mesh>
     </group>
   );
 }
@@ -70,9 +64,9 @@ function AnimatedMesh() {
 export default function Scene() {
   return (
     <Canvas>
-        <directionalLight position={[0, 3, 2]} intensity={2.5} />
-        <Environment preset="city" />
-        <AnimatedMesh />
+      <directionalLight position={[0, 3, 2]} intensity={2} />
+      <Environment preset="city" />
+      <AnimatedMesh />
     </Canvas>
   );
 }
