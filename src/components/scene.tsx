@@ -34,15 +34,15 @@ function AnimatedMesh() {
   }, []);
 
   useFrame(() => {
-    mesh.current.rotation.x += 0.002;
-    mesh.current.rotation.y += 0.002;
+    mesh.current.rotation.x += 0.001;
+    mesh.current.rotation.y += 0.001;
   });
 
   const {viewport} = useThree();
 
   return (
     <group scale={viewport.width / 8.5}>
-      <Text fontSize={1.2} >
+      <Text fontSize={1.2} fontWeight={700}>
         hello world
       </Text>
       <motion.mesh ref={mesh} rotation-x={mouse.y} rotation-y={mouse.x}>
