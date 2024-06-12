@@ -4,7 +4,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Environment, MeshTransmissionMaterial, Text } from "@react-three/drei";
 import { useMotionValue, useSpring } from "framer-motion";
 import { motion } from "framer-motion-3d";
-import { useControls, LevaPanel, LevaInputs } from "leva";
+import { useControls} from "leva";
 
 function AnimatedMesh() {
   const mesh = useRef(null);
