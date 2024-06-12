@@ -4,8 +4,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Environment, MeshTransmissionMaterial, Text } from "@react-three/drei";
 import { useMotionValue, useSpring } from "framer-motion";
 import { motion } from "framer-motion-3d";
-import { useControls } from "leva";
-import * as THREE from 'three';
+import { useControls, LevaPanel, LevaInputs } from "leva";
 
 function AnimatedMesh() {
   const mesh = useRef(null);
@@ -47,6 +46,7 @@ function AnimatedMesh() {
     ior: { value: 0.9, min: 0, max: 3, step: 0.1 },
     chromaticAberration: { value: 0.32, min: 0, max: 1 },
     backside: { value: true },
+    LevaInputs: {value: false},
   });
 
   return (

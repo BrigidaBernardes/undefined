@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
+@font-face {
+  font-family: "Climate Crisis";
+  src: url("/public/fonts/ClimateCrisis.ttf") format("ttf");
+}
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap");
 
 @layer base {
   :root {
@@ -34,8 +37,10 @@
     --ring: 240 10% 3.9%;
 
     --radius: 0.5rem;
-    
-    font-family: "Climate Crisis", sans-serif !important;
+  }
+
+  #leva__root {
+    display: none !important;
   }
 
   .dark {
