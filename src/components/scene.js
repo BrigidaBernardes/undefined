@@ -5,6 +5,7 @@ import { Environment, MeshTransmissionMaterial, Text } from "@react-three/drei";
 import { useMotionValue, useSpring } from "framer-motion";
 import { motion } from "framer-motion-3d";
 import { useControls } from "leva";
+import * as THREE from 'three';
 
 function AnimatedMesh() {
   const mesh = useRef(null);
@@ -18,7 +19,7 @@ function AnimatedMesh() {
     y: useSpring(useMotionValue(0), options),
   };
 
-  const manageMouseMove = (event: MouseEvent) => {
+  const manageMouseMove = () => {
     const { innerWidth, innerHeight } = window;
     const { clientX, clientY } = event;
     const targetX = -0.5 + clientX / innerWidth;
