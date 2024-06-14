@@ -10,7 +10,7 @@ export default function Page() {
       <Header />
       <div className="flex align-middle justify-center mt-20">
         <Tabs defaultValue="tech" className="flex flex-col  w-2/4 ">
-          <TabsList >
+          <TabsList>
             <TabsTrigger value="tech">Tech</TabsTrigger>
             <TabsTrigger value="design">Design</TabsTrigger>
             <TabsTrigger value="social">Social</TabsTrigger>
@@ -18,12 +18,11 @@ export default function Page() {
           <TabsContent value="tech">
             <Card className="flex bg-slate-100 rounded-xl p-4 pt-7 flex-col text-center space-y-4 items-center">
               <Avatar className="w-28 h-28 flex">
-                <AvatarImage src="https://avatars.githubusercontent.com/u/28297385?v=4" />
                 <AvatarFallback>BB</AvatarFallback>
               </Avatar>
               <CardTitle>
                 <p className="underline decoration-wavy decoration-fuchsia-900">
-                  Brigida Bernardes
+                  Undefined
                 </p>
               </CardTitle>
               <CardContent>
@@ -51,7 +50,7 @@ export default function Page() {
               </Avatar>
               <CardTitle>
                 <p className="underline decoration-wavy decoration-fuchsia-900">
-                  Luiz Gustavo Andreaca
+                  Undefined
                 </p>
               </CardTitle>
               <CardContent>
@@ -71,14 +70,14 @@ export default function Page() {
             </Card>
           </TabsContent>
           <TabsContent value="social">
-          <Card className="flex bg-slate-100 rounded-xl p-4 pt-7 flex-col text-center space-y-4 items-center">
+            <Card className="flex bg-slate-100 rounded-xl p-4 pt-7 flex-col text-center space-y-4 items-center">
               <Avatar className="w-28 h-28 flex">
                 <AvatarImage src="" />
                 <AvatarFallback>RD</AvatarFallback>
               </Avatar>
               <CardTitle>
                 <p className="underline decoration-wavy decoration-fuchsia-900">
-                  Renata Delgado
+                  Undefined
                 </p>
               </CardTitle>
               <CardContent>
