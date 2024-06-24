@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const Header: React.FC = () => {
@@ -9,16 +8,16 @@ const Header: React.FC = () => {
           <Link href="/">UDFND</Link>
         </h1>
         <div className="pt-5 px-10">
-          <Button
+          {/* <Button
             variant={"ghost"}
             className="Logo text-lg text-slate-50 font-bold"
           >
             <Link href="/about">Sobre</Link>
-          </Button>
+          </Button> 
           <Button
             variant={"ghost"}
             className="Logo text-lg text-slate-50 font-bold"
-          ></Button>
+          ></Button>*/}
         </div>
       </div>
     </header>
